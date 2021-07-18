@@ -1,9 +1,9 @@
-const name = document.getElementById("name_btn");
+const ticker = document.querySelector("#name_btn");
 const namesize = document.getElementById("inputname")
 const price = document.getElementById("price_btn");
 const number = document.getElementById("number_btn");
 
-function ClickName(){
+function ClickTicker(){
     if(namesize.value === ""){
         alert('종목을 입력하세요.');
     }else{
@@ -27,14 +27,6 @@ function ClickNumber(){
     }
 }
 
-if (name){
-    name.addEventListener("click", ClickName);
-}
-
-if (price){
-    price.addEventListener("click", ClickPrice);
-}
-
-if (number){
-    number.addEventListener("click", ClickNumber);
-}
+ticker.addEventListener("click", ClickTicker);
+price.addEventListener("click", ClickPrice);
+number.addEventListener("click", ClickNumber);

@@ -4,9 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>내 주식 확인</title>
+    <title>내 주식 확인</title>    
+    <link rel="stylesheet" href="stockstyle.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-    준비중...
+    <button onclick="openclose()" class="hide_btn" id="onoffbtn">숨기기</button>
+    <table id="stocktable">
+        <tr>
+            <th>종목이름</th>
+            <th>평단</th>
+            <th>갯수</th>
+        </tr>   
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+    </table>
+
+    <script src="JS_table.js"></script>
 </body>
 </html>

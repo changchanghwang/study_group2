@@ -23,16 +23,21 @@ body{
     font-weight: bold;
     color:rgb(207,205,218);
 }
+.subject div{
+    display:flex;
+}
+
 .object{
-    width:75px;
+    width:100px;
     display:inline-block;
 }
 .wrap {
     margin: auto;
     width: 400px;
 }
-.input{
+.inputs{
     border:1px solid #03c75a;
+    flex:0.5;
 }
 .btn{
     margin-left: 10px;

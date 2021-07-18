@@ -1,0 +1,16 @@
+@import "reset.css";
+body{
+    background-color:rgb(19,23,34) !important;  
+}
+table{
+    width: 100%;
+    color:rgb(207,205,218);
+}
+table, th, td{
+    border:1px solid rgb(207,205,218);
+}
+.hide_btn{
+    background-color: rgb(19,23,34);
+    border: 1px solid rgb(207,205,218);
+    color:rgb(207,205,218);
+}
