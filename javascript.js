@@ -1,32 +1,44 @@
-const ticker = document.querySelector("#name_btn");
-const namesize = document.getElementById("inputname")
-const price = document.getElementById("price_btn");
-const number = document.getElementById("number_btn");
+const stBtn = document.querySelector(".subject #stock_btn");
+const namesize = document.querySelector(".subject #inputname")
+const pricesize = document.querySelector(".subject #inputprice")
+const numbersize = document.querySelector(".subject #inputnumber")
 
-function ClickTicker(){
+function InputStock(){
+    ticker = $('#inputname').val();
+    price = $('#inputprice').val();
+    quantity = $('#inputnumber').val();
+
+    $.ajax({
+        type: "POST",
+        url: "/Stock",
+        data: {ticker_give:ticker, price_give : price, quantity_give : quantity},
+        success: function (response){
+            alert(response["msg"]);
+            window.location.reload()
+        }
+    })
     if(namesize.value === ""){
         alert('종목을 입력하세요.');
-    }else{
-        alert('종목이 입력되었습니다.');
+    }
+    if(pricesize.value ===""){
+        alert('평단가를 입력하세요.')
+    }
+    if(numbersize.value ===""){
+        alert('갯수를 입력하세요.')
     }
 }
 
-function ClickPrice(){
-    if(namesize.value === ""){
-        alert('평단가를 입력하세요.');
-    }else{
-        alert('평단가가 입력되었습니다.');
-    }
-}
+// function checkNum(){
+//     let keyCode = event.keyCode
+//     if(((keyCode >= 48) && (keyCode <= 57))&&((keyCode >= 96)&&(keyCode <= 105))){
+//         return true;
+//     }
+//     else{
+//         alert("숫자만 입력가능합니다");
+//         return false;
+//     }
+// }
 
-function ClickNumber(){
-    if(namesize.value === ""){
-        alert('갯수를 입력하세요.');
-    }else{
-        alert('갯수가 입력되었습니다.');
-    }
-}
-
-ticker.addEventListener("click", ClickTicker);
-price.addEventListener("click", ClickPrice);
-number.addEventListener("click", ClickNumber);
+stBtn.addEventListener("click", InputStock);
+// pricesize.addEventListener("keydown", checkNum)
+// numbersize.addEventListener("keydown", checkNum)

@@ -14,3 +14,8 @@ table, th, td{
     border: 1px solid rgb(207,205,218);
     color:rgb(207,205,218);
 }
+
+.rates{
+    color:rgb(207,205,218);
+    font-weight: bold;
+}

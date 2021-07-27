@@ -5,24 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>내 주식 확인</title>    
-    <link rel="stylesheet" href="stockstyle.css" />
+    <link rel="stylesheet" href="static/stockstyle.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 </head>
 <body>
     <button onclick="openclose()" class="hide_btn" id="onoffbtn">숨기기</button>
+    <div class="rates"> 현재 환율 : <span id="rate"></span>
+    </div>
     <table id="stocktable">
-        <tr>
-            <th>종목이름</th>
-            <th>평단</th>
-            <th>갯수</th>
-        </tr>   
-        <tr>
-            <th></th>
-            <th></th>
-            <th></th>
-        </tr>
+        <thead>
+            <tr>
+                <th>종목이름</th>
+                <th>평단($)</th>
+                <th>갯수</th>
+                <th>총액($)</th>
+            </tr>   
+        </thead>
     </table>
 
-    <script src="JS_table.js"></script>
+    <script src="static/JS_table.js"></script>
 </body>
 </html>

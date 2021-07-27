@@ -1,46 +1,48 @@
 @import "reset.css";
 body{
     background-color:rgb(19,23,34) !important;  
+    color:rgb(207,205,218);
+    text-align: center !important;
+}
+.upside{
+    padding: 20px, auto, 20px, auto;
 }
 .title{
     color: rgb(207,205,218);
-    width: 400px;
+    width: 600px;
     height: 300px;
     border-radius: 10px;
     text-align: center;
     padding-top: 40px;
     font-size : 40px;
+    margin : auto;
 }
 .mystock{
-    margin: 10px auto auto 70px;
     display:inline-block;
     border: 1px solid #19ce60;
     color: rgb(207,205,218);
 }
 .subject{
-    width: 600px;
     font-size: 16px;
     font-weight: bold;
     color:rgb(207,205,218);
 }
 .subject div{
-    display:flex;
+    display: block;
+    margin:auto;
 }
 
 .object{
-    width:100px;
+    width:70px;
     display:inline-block;
 }
-.wrap {
-    margin: auto;
-    width: 400px;
-}
 .inputs{
+    width: 400px;
     border:1px solid #03c75a;
     flex:0.5;
 }
 .btn{
-    margin-left: 10px;
+    margin: 10px auto 30px 10px;
     border-radius: 5px;
     border-color: white;
     background-color: rgb(207,205,218);
@@ -54,4 +56,24 @@ body{
     width:380px;
     font-size:13px;
     color : #f3f5f7;
+}
+.styleHeader{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding: 20px 0px;
+}
+.styleHeader div a {
+    flex:1;
+    border : 1px sold rgb(19,23,34);
+    border-radius: 5px;
+    padding: 0px;
+}
+.sign:link{
+    border : rgb(207,205,218);
+    color :  rgb(207,205,218);
+    background-color:rgb(32,38,55);
+    text-decoration: none;
 }
