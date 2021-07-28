@@ -27,14 +27,14 @@ def save_stock():
     doc ={'ticker':ticker_receive,'price':price_receive,'quantity':quantity_receive}
     db.stock.insert_one(doc)
 
-    return jsonify({'msg': '저장완료!'})
+    return jsonify({'result': 'success', 'msg': '저장완료!'})
 
 
 # 주문 목록보기(Read) API
 @app.route('/Stock', methods=['GET'])
 def view_stock():
     my_stock= list(db.stock.find({}, {'_id': False}))
-    return jsonify({'view_stock': my_stock})
+    return jsonify({'result': 'success','view_stock': my_stock})
 
 
 if __name__ == '__main__':

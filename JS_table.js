@@ -22,10 +22,12 @@ function rate(){
             url: "http://spartacodingclub.shop/sparta_api/rate",
             data: {},
             success: function (response){
-                let rates = response['rate'];
-                let temp_html = ""
-                temp_html =`<span class="rates">${rates+'원'}</span>`
-                $('#rate').append(temp_html)
+                if (response["result"] == "success") {
+                    let rates = response['rate'];
+                    let temp_html = ""
+                    temp_html =`<span class="rates">${rates+'원'}</span>`
+                    $('#rate').append(temp_html)
+                }
             }
         })
 }
