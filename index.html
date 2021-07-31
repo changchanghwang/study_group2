@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>주식 포트폴리오 관리하기</title>
+    <title>MyAssets</title>
     <link rel="stylesheet" href="static/style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    
+    <meta property="og:title" content="My Asset" />
+    <meta property="og:description" content="내 주식 포트폴리오를 입력해보고 확인하자!" />
+    <meta property="og:image" content="{{ url_for('static', filename='ogimage.png') }}" />
+
 </head>
 <body>
     <!-- 윗부분(검색, 로그인, 회원가입) -->

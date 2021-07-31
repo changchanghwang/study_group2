@@ -4,15 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>내 주식 확인</title>    
+    <title>내 주식 확인</title>
     <link rel="stylesheet" href="static/stockstyle.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </head>
 <body>
-    <button onclick="openclose()" class="hide_btn" id="onoffbtn">숨기기</button>
-    <div class="rates"> 현재 환율 : <span id="rate"></span>
-    </div>
+    <button onclick="openclose()" class="hide_btn" id="onoffbtn">숨기기</button> 
+
+    <button type='button' id='Ed_modal_btn'>편집</button>
+        <div class = "black_bg" id = "Ed_black_bg"></div>
+        <div class = "modal_wrap" id = "Ed_modal_wrap">
+            <div class = "modal_close" id="Ed_modal_close"><a href="#">close</a></div>
+            <div class = "modalSt">
+                <div class = "modalName"><span class= "Ticker">종목 이름: </span> 
+                    <select type="text" class="inputs" id="inputname">
+                        <option value="">편집할 종목을 골라주세요.</option>
+                    </select> 
+                </div>
+                <div class ="modalPrice"><span class = "price">평단가: </span> 
+                    <input type="number" class="inputs" id="inputprice" placeholder="평단가를 입력하세요"> 
+                </div>
+                <div class = "modalNumber"><span class = "number">갯수: </span> 
+                    <input type="number" class="inputs" id="inputnumber" placeholder="갯수를 입력하세요"> 
+                </div>
+                <button class="btn" id="stock_btn">확인</button>
+            </div>
+        </div>
+
+    <button type='button' id='D_modal_btn'>삭제</button>
+        <div class = "black_bg" id='D_black_bg'></div>
+        <div class = "modal_wrap" id = 'D_modal_wrap'>
+            <div class = "modal_close" id='D_modal_close'><a href="#">close</a></div>
+            <div class = "modalSt">
+                <div class = "modalName"><span class= "Ticker">종목 이름: </span> 
+                    <select type="text" class="inputs" id="delete_stock">
+                        <option value="">삭제할 종목을 골라주세요.</option>
+                    </select>
+                </div>
+                <button class="btn" id="D_stock_btn">확인</button>
+            </div>
+        </div>
+    <div class="rates"> 현재 환율 : <span id="rate"></span></div>
     <table id="stocktable">
         <thead>
             <tr>
